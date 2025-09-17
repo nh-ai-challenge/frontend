@@ -37,7 +37,6 @@ const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const persona = location.state?.persona || '장인적 계승가';
-  const [activeNav, setActiveNav] = useState('home');
   const [candidates] = useState<Candidate[]>([
     {
       id: 1,
@@ -145,13 +144,6 @@ const Dashboard: React.FC = () => {
     { icon: <FileText size={24} />, label: '계약관리', path: '/contracts' }
   ];
 
-  const navItems = [
-    { id: 'home', icon: <Home size={24} />, label: '홈' },
-    { id: 'search', icon: <SearchIcon size={24} />, label: '탐색' },
-    { id: 'messages', icon: <MessageSquare size={24} />, label: '메시지' },
-    { id: 'contracts', icon: <FileText size={24} />, label: '계약' },
-    { id: 'profile', icon: <User size={24} />, label: 'MY' }
-  ];
 
   return (
     <div className="min-h-screen bg-gray-50 pb-[70px]">
@@ -396,26 +388,6 @@ const Dashboard: React.FC = () => {
           </div>
         </section>
       </main>
-
-      {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 h-[70px] bg-white border-t border-gray-200 flex z-50">
-        {navItems.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => setActiveNav(item.id)}
-            className="flex-1 flex flex-col items-center justify-center py-2 gap-1"
-          >
-            <div className={activeNav === item.id ? 'text-[#00984f]' : 'text-gray-400'}>
-              {item.icon}
-            </div>
-            <span className={`text-[11px] font-medium ${
-              activeNav === item.id ? 'text-[#00984f]' : 'text-gray-400'
-            }`}>
-              {item.label}
-            </span>
-          </button>
-        ))}
-      </nav>
     </div>
   );
 };

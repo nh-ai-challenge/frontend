@@ -29,7 +29,7 @@ const MobileHome: React.FC = () => {
           <div className="w-8 h-8 bg-[#00984f] rounded-lg flex items-center justify-center text-white font-bold text-xs">
             NH
           </div>
-          <span className="text-lg font-bold text-[#00984f]">팜링크</span>
+          <span className="text-lg font-bold text-[#00984f]">팀명 뭐해요?</span>
         </div>
         <button className="p-2">
           <Bell size={20} className="text-gray-600" />

@@ -14,7 +14,7 @@ const BottomNav: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-40">
       <div className="flex justify-around">
         {navItems.map((item) => {
           const Icon = item.icon;

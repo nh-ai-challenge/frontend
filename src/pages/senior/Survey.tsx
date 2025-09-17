@@ -569,7 +569,7 @@ const Survey: React.FC = () => {
         </div>
       </main>
 
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-5 flex gap-3 z-10">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-5 flex gap-3 z-50">
         <button
           onClick={handlePrev}
           disabled={currentSection === 1}

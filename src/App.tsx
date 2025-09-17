@@ -7,6 +7,7 @@ import Dashboard from './pages/senior/Dashboard';
 import RecommendationList from './pages/matching/RecommendationList';
 import CandidateDetail from './pages/matching/CandidateDetail';
 import Connection from './pages/matching/Connection';
+import Finance from './pages/finance/Finance';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           </Route>
           <Route path="community" element={<div className="pt-20 p-8">커뮤니티</div>} />
           <Route path="partnership" element={<div className="pt-20 p-8">파트너십 관리</div>} />
-          <Route path="finance" element={<div className="pt-20 p-8">금융상품</div>} />
+          <Route path="finance" element={<Finance />} />
         </Route>
       </Routes>
     </Router>

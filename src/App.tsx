@@ -8,6 +8,7 @@ import RecommendationList from './pages/matching/RecommendationList';
 import CandidateDetail from './pages/matching/CandidateDetail';
 import Connection from './pages/matching/Connection';
 import Finance from './pages/finance/Finance';
+import YouthSurvey from './pages/youth/YouthSurvey';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           </Route>
           <Route path="youth">
             <Route path="profile" element={<div className="pt-20 p-8">청년 프로필 페이지</div>} />
-            <Route path="survey" element={<div className="pt-20 p-8">청년 설문 페이지</div>} />
+            <Route path="survey" element={<YouthSurvey />} />
             <Route path="dashboard" element={<div className="pt-20 p-8">청년 대시보드</div>} />
           </Route>
           <Route path="matching">

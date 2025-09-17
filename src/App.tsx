@@ -3,6 +3,8 @@ import Layout from './layouts/Layout';
 import MobileHome from './pages/MobileHome';
 import ValueAssessment from './pages/senior/ValueAssessment';
 import Survey from './pages/senior/Survey';
+import Dashboard from './pages/senior/Dashboard';
+import RecommendationList from './pages/matching/RecommendationList';
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
           <Route path="senior">
             <Route path="value-check" element={<ValueAssessment />} />
             <Route path="survey" element={<Survey />} />
-            <Route path="dashboard" element={<div className="pt-20 p-8">시니어 대시보드</div>} />
+            <Route path="dashboard" element={<Dashboard />} />
           </Route>
           <Route path="youth">
             <Route path="profile" element={<div className="pt-20 p-8">청년 프로필 페이지</div>} />
@@ -21,7 +23,7 @@ function App() {
             <Route path="dashboard" element={<div className="pt-20 p-8">청년 대시보드</div>} />
           </Route>
           <Route path="matching">
-            <Route path="list" element={<div className="pt-20 p-8">추천 리스트</div>} />
+            <Route path="list" element={<RecommendationList />} />
             <Route path="profile/:id" element={<div className="pt-20 p-8">상세 프로필</div>} />
           </Route>
           <Route path="community" element={<div className="pt-20 p-8">커뮤니티</div>} />

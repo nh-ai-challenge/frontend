@@ -222,7 +222,6 @@ const ValueAssessment: React.FC = () => {
                 : 'bg-gray-200 text-gray-400'
             }`}
           >
-            <span>🤖</span>
             <span>AI 가치평가 시작</span>
           </button>
         </div>
@@ -264,7 +263,6 @@ const ValueAssessment: React.FC = () => {
               <p className="text-4xl font-bold mb-4">4.2억원</p>
               
               <div className="bg-white/20 backdrop-blur rounded-full px-4 py-2 inline-flex items-center gap-2 mb-4">
-                <span>🎯</span>
                 <span className="text-sm font-semibold">신뢰도 92%</span>
               </div>
 
@@ -287,8 +285,8 @@ const ValueAssessment: React.FC = () => {
             {/* AI 분석 과정 */}
             <div className="mb-6">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-base font-semibold flex items-center gap-2">
-                  <span>🤖</span> AI가 분석한 과정
+                <h3 className="text-base font-semibold">
+                  AI가 분석한 과정
                 </h3>
                 <span className="bg-green-100 text-[#00984f] text-xs px-3 py-1 rounded-full font-semibold">
                   투명한 AI
@@ -333,7 +331,7 @@ const ValueAssessment: React.FC = () => {
                 <div className="space-y-4">
                   <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
                     <p className="text-sm text-blue-700">
-                      💭 "충주시 사과농장 3.5ha를 분석하기 위해 유사한 조건의 농장들을 찾아볼게요"
+                      "충주시 사과농장 3.5ha를 분석하기 위해 유사한 조건의 농장들을 찾아볼게요"
                     </p>
                   </div>
                   
@@ -341,7 +339,9 @@ const ValueAssessment: React.FC = () => {
                     <div className="grid grid-cols-2 gap-3 mb-3">
                       <div className="bg-green-50 p-3 rounded-lg border border-green-200">
                         <div className="flex items-center gap-2">
-                          <span className="text-xl">🍎</span>
+                          <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                            <span className="text-sm font-bold text-green-700">사과</span>
+                          </div>
                           <div className="flex-1">
                             <p className="text-xs text-gray-600">사과농장</p>
                             <p className="text-sm font-bold text-[#00984f]">382개</p>
@@ -350,7 +350,9 @@ const ValueAssessment: React.FC = () => {
                       </div>
                       <div className="bg-gray-50 p-3 rounded-lg">
                         <div className="flex items-center gap-2">
-                          <span className="text-xl">📍</span>
+                          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                            <MapPin size={16} className="text-gray-700" />
+                          </div>
                           <div className="flex-1">
                             <p className="text-xs text-gray-600">충주/인근</p>
                             <p className="text-sm font-bold text-gray-700">156개</p>
@@ -370,12 +372,12 @@ const ValueAssessment: React.FC = () => {
                 <div className="space-y-4">
                   <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
                     <p className="text-sm text-blue-700">
-                      💭 "농장님의 농장이 다른 농장보다 어떤 점이 특별한지 비교해봤어요"
+                      "농장님의 농장이 다른 농장보다 어떤 점이 특별한지 비교해봤어요"
                     </p>
                   </div>
 
                   <div className="bg-white border border-gray-200 rounded-xl p-4">
-                    <h4 className="text-sm font-semibold mb-3">🌟 강점 (상위 20%)</h4>
+                    <h4 className="text-sm font-semibold mb-3">강점 (상위 20%)</h4>
                     <div className="space-y-2">
                       {[
                         { name: '도로 접근성', score: 95 },
@@ -403,7 +405,7 @@ const ValueAssessment: React.FC = () => {
                 <div className="space-y-4">
                   <div className="bg-blue-50 border border-blue-200 rounded-xl p-3">
                     <p className="text-sm text-blue-700">
-                      💭 "3가지 AI 모델로 교차 검증했어요. 결과가 비슷해서 신뢰도가 높아요!"
+                      "3가지 AI 모델로 교차 검증했어요. 결과가 비슷해서 신뢰도가 높아요!"
                     </p>
                   </div>
 

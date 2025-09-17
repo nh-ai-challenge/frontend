@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Brain, DollarSign, BarChart, Handshake, Building2, Scale } from 'lucide-react';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -35,14 +36,12 @@ const Home: React.FC = () => {
                   onClick={handleSeniorClick}
                   className="px-8 py-4 bg-[#008350] text-white rounded-lg font-semibold text-lg hover:bg-[#006940] transition-colors flex items-center gap-2"
                 >
-                  <span>👨‍🌾</span>
                   내 농장 가치 알아보기
                 </button>
                 <button 
                   onClick={handleYouthClick}
                   className="px-8 py-4 bg-white text-[#0065B3] border-2 border-[#0065B3] rounded-lg font-semibold text-lg hover:bg-[#f0f7ff] transition-colors flex items-center gap-2"
                 >
-                  <span>🌱</span>
                   내게 맞는 농장 찾기
                 </button>
               </div>
@@ -89,32 +88,32 @@ const Home: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
-              icon="🤖"
+              icon={<Brain size={32} className="text-[#00984f]" />}
               title="AI 정밀 매칭"
               description="가치관, 경영철학, 품목 등 다각도 분석으로 최적의 파트너 매칭"
             />
             <FeatureCard
-              icon="💰"
+              icon={<DollarSign size={32} className="text-[#00984f]" />}
               title="농지연금신탁 연계"
               description="안정적인 노후 보장과 원활한 승계를 위한 금융 솔루션"
             />
             <FeatureCard
-              icon="📊"
+              icon={<BarChart size={32} className="text-[#00984f]" />}
               title="AI 가치평가"
               description="객관적이고 투명한 농장 가치 산정 시스템"
             />
             <FeatureCard
-              icon="🤝"
+              icon={<Handshake size={32} className="text-[#00984f]" />}
               title="3단계 파트너십"
               description="인턴십부터 최종 승계까지 단계별 안전한 진행"
             />
             <FeatureCard
-              icon="🏦"
+              icon={<Building2 size={32} className="text-[#00984f]" />}
               title="영농승계 브릿지론"
               description="청년 농부를 위한 맞춤형 금융 지원"
             />
             <FeatureCard
-              icon="⚖️"
+              icon={<Scale size={32} className="text-[#00984f]" />}
               title="법률 지원"
               description="계약서 작성부터 등기까지 전문가 원스톱 서비스"
             />
@@ -149,14 +148,12 @@ const Home: React.FC = () => {
               onClick={handleSeniorClick}
               className="px-8 py-4 bg-[#008350] text-white rounded-lg font-semibold text-lg hover:bg-[#006940] transition-colors flex items-center gap-2"
             >
-              <span>👨‍🌾</span>
               시니어 농부로 시작하기
             </button>
             <button 
               onClick={handleYouthClick}
               className="px-8 py-4 bg-white text-[#0065B3] border-2 border-[#0065B3] rounded-lg font-semibold text-lg hover:bg-[#f0f7ff] transition-colors flex items-center gap-2"
             >
-              <span>🌱</span>
               청년 농부로 시작하기
             </button>
           </div>
@@ -166,9 +163,9 @@ const Home: React.FC = () => {
   );
 };
 
-const FeatureCard: React.FC<{ icon: string; title: string; description: string }> = ({ icon, title, description }) => (
+const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
   <div className="p-8 bg-gray-50 rounded-2xl text-center hover:shadow-lg transition-shadow">
-    <div className="w-20 h-20 bg-gradient-to-br from-[#e8f5ef] to-[#f5f1e9] rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">
+    <div className="w-20 h-20 bg-gradient-to-br from-[#e8f5ef] to-[#f5f1e9] rounded-full flex items-center justify-center mx-auto mb-6">
       {icon}
     </div>
     <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>

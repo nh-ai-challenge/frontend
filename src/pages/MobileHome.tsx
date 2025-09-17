@@ -58,7 +58,9 @@ const MobileHome: React.FC = () => {
                 onClick={() => navigate('/senior/value-check')}
                 className="bg-white rounded-xl p-4 text-center shadow-lg active:scale-98 transition-transform"
               >
-                <div className="text-2xl mb-1">👨‍🌾</div>
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <Users size={24} className="text-green-700" />
+                </div>
                 <div className="font-bold text-sm text-gray-900">농장 팔기</div>
                 <div className="text-xs text-gray-600 mt-1">시니어 농부님</div>
               </button>
@@ -66,7 +68,9 @@ const MobileHome: React.FC = () => {
                 onClick={() => navigate('/youth/profile')}
                 className="bg-white rounded-xl p-4 text-center shadow-lg active:scale-98 transition-transform"
               >
-                <div className="text-2xl mb-1">🌱</div>
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <TrendingUp size={24} className="text-blue-700" />
+                </div>
                 <div className="font-bold text-sm text-gray-900">농장 찾기</div>
                 <div className="text-xs text-gray-600 mt-1">청년 농부</div>
               </button>

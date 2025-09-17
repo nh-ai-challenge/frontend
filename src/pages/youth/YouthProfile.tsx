@@ -102,8 +102,8 @@ const YouthProfile: React.FC = () => {
           </div>
           <h1 className="text-[32px] font-bold mb-3">비전 프로필 완성!</h1>
           <p className="text-lg text-gray-600 mb-8">
-            AI가 작성하신 내용을 분석해<br />
-            최적의 시니어 농부님을 찾아드릴게요
+            이제 설문을 통해<br />
+            더 정확한 매칭을 진행해보세요
           </p>
           
           <div className="grid grid-cols-2 gap-4 mb-8">
@@ -118,10 +118,10 @@ const YouthProfile: React.FC = () => {
           </div>
           
           <button
-            onClick={() => navigate('/youth/dashboard')}
+            onClick={() => navigate('/youth/survey')}
             className="w-full px-6 py-4 bg-gradient-to-r from-[#00984f] to-[#00c968] text-white rounded-2xl font-bold text-lg"
           >
-            매칭 결과 보러가기
+            설문 시작하기
           </button>
         </div>
       </div>

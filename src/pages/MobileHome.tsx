@@ -103,7 +103,7 @@ const MobileHome: React.FC = () => {
             
             {/* AI 가치평가 */}
             <button
-              onClick={() => navigate('/senior/value-check')}
+              onClick={() => navigate('/senior/value-check?mode=simple')}
               className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl mb-3"
             >
               <div className="flex items-center gap-3">
@@ -111,7 +111,7 @@ const MobileHome: React.FC = () => {
                   <Calculator size={24} />
                 </div>
                 <div className="text-left">
-                  <div className="font-semibold text-sm">AI 농장 가치평가</div>
+                  <div className="font-semibold text-sm">우리 농장 가격 알아보기</div>
                   <div className="text-xs text-gray-600">주소만 입력하면 즉시 확인</div>
                 </div>
               </div>

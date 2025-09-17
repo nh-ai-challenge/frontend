@@ -13,6 +13,7 @@ import YouthProfile from './pages/youth/YouthProfile';
 import YouthDashboard from './pages/youth/YouthDashboard';
 import CommunityList from './pages/community/CommunityList';
 import ChatPage from './pages/community/ChatPage';
+import Partnership from './pages/partnership/Partnership';
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
             <Route index element={<CommunityList />} />
             <Route path="chat/:id" element={<ChatPage />} />
           </Route>
-          <Route path="partnership" element={<div className="pt-20 p-8">파트너십 관리</div>} />
+          <Route path="partnership" element={<Partnership />} />
           <Route path="finance" element={<Finance />} />
         </Route>
       </Routes>

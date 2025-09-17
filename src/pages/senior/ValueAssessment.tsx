@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
   Search, 
@@ -14,6 +14,8 @@ import {
 
 const ValueAssessment: React.FC = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const isSimpleMode = searchParams.get('mode') === 'simple';
   const [currentStep, setCurrentStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [showResult, setShowResult] = useState(false);
@@ -23,6 +25,7 @@ const ValueAssessment: React.FC = () => {
   const [showAdditionalInfo, setShowAdditionalInfo] = useState(false);
   const [expandedAnalysis, setExpandedAnalysis] = useState<string | null>(null);
   const [selectedStep, setSelectedStep] = useState(1);
+  const [showSavedMessage, setShowSavedMessage] = useState(false);
 
   const handleAddressSearch = (value: string) => {
     if (value.length > 0) {
@@ -493,14 +496,57 @@ const ValueAssessment: React.FC = () => {
               </p>
             </div>
 
-            {/* 다음 단계 버튼 */}
-            <button
-              onClick={() => navigate('/senior/survey')}
-              className="w-full h-14 bg-[#00984f] text-white rounded-xl font-semibold text-lg flex items-center justify-center gap-2"
-            >
-              최적 후계자 찾기
-              <ChevronRight size={20} />
-            </button>
+            {/* 선택지 버튼 - mode에 따라 다르게 표시 */}
+            {isSimpleMode ? (
+              <div className="space-y-3">
+                <button
+                  onClick={() => navigate('/senior/survey')}
+                  className="w-full h-14 bg-gradient-to-r from-[#00984f] to-[#00c968] text-white rounded-xl font-semibold text-lg flex items-center justify-center gap-2"
+                >
+                  후계자 매칭 받기
+                  <ChevronRight size={20} />
+                </button>
+                <button
+                  onClick={() => {
+                    setShowSavedMessage(true);
+                    setTimeout(() => {
+                      navigate('/');
+                    }, 2000);
+                  }}
+                  className="w-full h-14 bg-white border-2 border-[#00984f] text-[#00984f] rounded-xl font-semibold text-lg"
+                >
+                  결과만 저장하기
+                </button>
+                <p className="text-center text-xs text-gray-500">
+                  * 저장된 결과는 마이페이지에서 언제든 확인 가능합니다
+                </p>
+              </div>
+            ) : (
+              <button
+                onClick={() => navigate('/senior/survey')}
+                className="w-full h-14 bg-[#00984f] text-white rounded-xl font-semibold text-lg flex items-center justify-center gap-2"
+              >
+                최적 후계자 찾기
+                <ChevronRight size={20} />
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* 저장 완료 메시지 */}
+      {showSavedMessage && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[70]">
+          <div className="bg-white rounded-2xl p-8 text-center max-w-sm">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <p className="text-lg font-semibold mb-2">평가 결과가 저장되었습니다</p>
+            <p className="text-sm text-gray-600">
+              마이페이지에서 언제든 확인하실 수 있습니다
+            </p>
           </div>
         </div>
       )}

@@ -6,6 +6,7 @@ import Survey from './pages/senior/Survey';
 import Dashboard from './pages/senior/Dashboard';
 import RecommendationList from './pages/matching/RecommendationList';
 import CandidateDetail from './pages/matching/CandidateDetail';
+import Connection from './pages/matching/Connection';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="matching">
             <Route path="list" element={<RecommendationList />} />
             <Route path="profile/:id" element={<CandidateDetail />} />
+            <Route path="connect/:id" element={<Connection />} />
           </Route>
           <Route path="community" element={<div className="pt-20 p-8">커뮤니티</div>} />
           <Route path="partnership" element={<div className="pt-20 p-8">파트너십 관리</div>} />

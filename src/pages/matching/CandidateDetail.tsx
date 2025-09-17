@@ -387,7 +387,7 @@ const CandidateDetail: React.FC = () => {
           {isSaved ? '저장됨' : '관심 저장'}
         </button>
         <button
-          onClick={() => navigate('/messages')}
+          onClick={() => navigate(`/matching/connect/${id}`)}
           className="flex-1 py-3.5 bg-gradient-to-r from-[#00984f] to-[#00c968] text-white rounded-xl font-semibold text-base flex items-center justify-center gap-2"
         >
           <MessageSquare size={18} />

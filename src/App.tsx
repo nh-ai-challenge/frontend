@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import MobileHome from './pages/MobileHome';
 import ValueAssessment from './pages/senior/ValueAssessment';
+import Survey from './pages/senior/Survey';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <Route index element={<MobileHome />} />
           <Route path="senior">
             <Route path="value-check" element={<ValueAssessment />} />
-            <Route path="survey" element={<div className="pt-20 p-8">시니어 설문 페이지</div>} />
+            <Route path="survey" element={<Survey />} />
             <Route path="dashboard" element={<div className="pt-20 p-8">시니어 대시보드</div>} />
           </Route>
           <Route path="youth">

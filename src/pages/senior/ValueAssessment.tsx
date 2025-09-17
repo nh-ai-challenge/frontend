@@ -212,7 +212,7 @@ const ValueAssessment: React.FC = () => {
         </main>
 
         {/* 하단 버튼 */}
-        <div className="fixed bottom-0 left-0 right-0 p-5 bg-white border-t border-gray-100">
+        <div className="fixed bottom-0 left-0 right-0 p-5 bg-white border-t border-gray-100 z-10">
           <button
             onClick={handleEvaluate}
             disabled={!selectedAddress || !selectedCrop}

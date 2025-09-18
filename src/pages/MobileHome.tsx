@@ -55,7 +55,7 @@ const MobileHome: React.FC = () => {
             {/* 메인 액션 버튼 - 2개 큰 버튼 */}
             <div className="grid grid-cols-2 gap-3">
               <button
-                onClick={() => navigate('/senior/value-check')}
+                onClick={() => navigate('/senior/profile')}
                 className="bg-white rounded-xl p-4 text-center shadow-lg active:scale-98 transition-transform"
               >
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -103,7 +103,7 @@ const MobileHome: React.FC = () => {
             
             {/* AI 가치평가 */}
             <button
-              onClick={() => navigate('/senior/value-check?mode=simple')}
+              onClick={() => navigate('/senior/profile')}
               className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl mb-3"
             >
               <div className="flex items-center gap-3">

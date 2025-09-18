@@ -4,6 +4,7 @@ import MobileHome from './pages/MobileHome';
 import ValueAssessment from './pages/senior/ValueAssessment';
 import Survey from './pages/senior/Survey';
 import Dashboard from './pages/senior/Dashboard';
+import SeniorProfile from './pages/senior/SeniorProfile';
 import RecommendationList from './pages/matching/RecommendationList';
 import CandidateDetail from './pages/matching/CandidateDetail';
 import Connection from './pages/matching/Connection';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<MobileHome />} />
           <Route path="senior">
+            <Route path="profile" element={<SeniorProfile />} />
             <Route path="value-check" element={<ValueAssessment />} />
             <Route path="survey" element={<Survey />} />
             <Route path="dashboard" element={<Dashboard />} />

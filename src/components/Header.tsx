@@ -14,7 +14,7 @@ const Header: React.FC = () => {
               <div className="w-8 h-8 bg-[#008350] rounded-lg flex items-center justify-center text-white font-bold text-sm">
                 NH
               </div>
-              <span className="text-lg font-bold text-[#008350]">팜링크</span>
+              <span className="text-lg font-bold text-[#008350]">Land Bridge</span>
             </Link>
             
             <button 

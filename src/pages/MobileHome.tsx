@@ -17,6 +17,7 @@ import {
   MapPin,
   Calculator
 } from 'lucide-react';
+import teamLogo from '../assets/Gemini_Generated_Image_7h790c7h790c7h79.png';
 
 const MobileHome: React.FC = () => {
   const navigate = useNavigate();
@@ -24,20 +25,21 @@ const MobileHome: React.FC = () => {
   return (
     <div className="bg-[#f7f9fb] min-h-screen">
       {/* 올원뱅크 스타일 헤더 */}
-      <header className="fixed top-0 left-0 right-0 h-14 bg-white flex items-center justify-between px-4 z-50 shadow-sm">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#00984f] rounded-lg flex items-center justify-center text-white font-bold text-xs">
-            NH
-          </div>
-          <span className="text-lg font-bold text-[#00984f]">팀명 뭐해요?</span>
+      <header className="fixed top-0 left-0 right-0 h-24 bg-white flex items-center justify-between px-4 z-50 shadow-sm">
+        <div className="h-full py-2">
+          <img 
+            src={teamLogo} 
+            alt="NH Agri-Continuum" 
+            className="h-full w-auto"
+          />
         </div>
         <button className="p-2">
-          <Bell size={20} className="text-gray-600" />
+          <Bell size={24} className="text-gray-600" />
         </button>
       </header>
 
       {/* 메인 컨텐츠 */}
-      <main className="pt-14 pb-20">
+      <main className="pt-24 pb-20">
         {/* 메인 히어로 배너 */}
         <section className="bg-gradient-to-br from-[#00984f] to-[#00c968] text-white">
           <div className="px-5 pt-6 pb-8">
@@ -55,7 +57,7 @@ const MobileHome: React.FC = () => {
             {/* 메인 액션 버튼 - 2개 큰 버튼 */}
             <div className="grid grid-cols-2 gap-3">
               <button
-                onClick={() => navigate('/senior/profile')}
+                onClick={() => navigate('/senior/value-check')}
                 className="bg-white rounded-xl p-4 text-center shadow-lg active:scale-98 transition-transform"
               >
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -103,7 +105,7 @@ const MobileHome: React.FC = () => {
             
             {/* AI 가치평가 */}
             <button
-              onClick={() => navigate('/senior/profile')}
+              onClick={() => navigate('/senior/value-check')}
               className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl mb-3"
             >
               <div className="flex items-center gap-3">
@@ -123,7 +125,7 @@ const MobileHome: React.FC = () => {
 
             {/* AI 매칭 */}
             <button
-              onClick={() => navigate('/matching/intro')}
+              onClick={() => navigate('/matching/list')}
               className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-xl mb-3"
             >
               <div className="flex items-center gap-3">
@@ -157,10 +159,10 @@ const MobileHome: React.FC = () => {
           </div>
         </section>
 
-        {/* NH 팜링크만의 특징 */}
+        {/* NH Land Bridge만의 특징 */}
         <section className="px-5 mt-6">
           <div className="bg-white rounded-2xl p-5 shadow-sm">
-            <h2 className="text-lg font-bold mb-4">NH 팜링크만의 특징</h2>
+            <h2 className="text-lg font-bold mb-4">NH Land Bridge만의 특징</h2>
             <div className="space-y-3">
               <FeatureItem
                 icon={<Award size={20} className="text-[#00984f]" />}
@@ -191,7 +193,7 @@ const MobileHome: React.FC = () => {
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold">최근 성공 사례</h2>
             <button 
-              onClick={() => navigate('/success-stories')}
+              onClick={() => navigate('/community')}
               className="text-sm text-[#00984f] font-medium"
             >
               더보기 <ChevronRight size={14} className="inline" />

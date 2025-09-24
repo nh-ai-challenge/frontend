@@ -58,11 +58,11 @@ const SeniorProfile: React.FC = () => {
   const isCurrentStepValid = () => {
     switch(currentStep) {
       case 1:
-        return (profileData.farmIntro?.length || 0) >= 50;
+        return (profileData.farmIntro?.length || 0) > 0;
       case 2:
-        return (profileData.philosophy?.length || 0) >= 50;
+        return (profileData.philosophy?.length || 0) > 0;
       case 3:
-        return (profileData.message?.length || 0) >= 30;
+        return (profileData.message?.length || 0) > 0;
       default:
         return false;
     }
@@ -150,8 +150,7 @@ const SeniorProfile: React.FC = () => {
                 onChange={(e) => setProfileData({...profileData, farmIntro: e.target.value})}
                 maxLength={500}
               />
-              <div className="flex justify-between text-sm text-gray-500 mt-2">
-                <span>최소 50자 이상 작성해주세요</span>
+              <div className="text-right text-sm text-gray-500 mt-2">
                 <span>{(profileData.farmIntro?.length || 0)} / 500</span>
               </div>
             </div>
@@ -189,8 +188,7 @@ const SeniorProfile: React.FC = () => {
                 onChange={(e) => setProfileData({...profileData, philosophy: e.target.value})}
                 maxLength={500}
               />
-              <div className="flex justify-between text-sm text-gray-500 mt-2">
-                <span>농업에 대한 철학과 가치관을 담아주세요</span>
+              <div className="text-right text-sm text-gray-500 mt-2">
                 <span>{(profileData.philosophy?.length || 0)} / 500</span>
               </div>
             </div>
@@ -228,8 +226,7 @@ const SeniorProfile: React.FC = () => {
                 onChange={(e) => setProfileData({...profileData, message: e.target.value})}
                 maxLength={300}
               />
-              <div className="flex justify-between text-sm text-gray-500 mt-2">
-                <span>진정성 있는 메시지를 전해주세요</span>
+              <div className="text-right text-sm text-gray-500 mt-2">
                 <span>{(profileData.message?.length || 0)} / 300</span>
               </div>
             </div>

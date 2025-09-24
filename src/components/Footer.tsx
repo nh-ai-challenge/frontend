@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="text-2xl font-bold mb-4">NH농협 팜링크</div>
+            <div className="text-2xl font-bold mb-4">NH농협 Land Bridge</div>
             <p className="text-gray-400 text-sm">
               농협중앙회가 운영하는 농장 승계 매칭 플랫폼<br />
               시니어와 청년이 함께 만드는 농업의 미래

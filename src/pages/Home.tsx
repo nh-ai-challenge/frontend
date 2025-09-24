@@ -80,7 +80,7 @@ const Home: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-5">
-            팜링크가 특별한 이유
+            Land Bridge가 특별한 이유
           </h2>
           <p className="text-xl text-center text-gray-600 mb-12">
             NH농협의 신뢰와 AI 기술이 만드는 안전한 농장 승계

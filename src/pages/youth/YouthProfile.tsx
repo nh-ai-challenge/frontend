@@ -69,9 +69,9 @@ const YouthProfile: React.FC = () => {
   const isCurrentStepValid = () => {
     switch(currentStep) {
       case 1:
-        return (profileData.introduction?.length || 0) >= 50;
+        return (profileData.introduction?.length || 0) > 0;
       case 2:
-        return (profileData.vision?.length || 0) >= 50;
+        return (profileData.vision?.length || 0) > 0;
       case 3:
         return true; // 사진은 선택사항
       default:
@@ -167,8 +167,7 @@ const YouthProfile: React.FC = () => {
                 onChange={(e) => setProfileData({...profileData, introduction: e.target.value})}
                 maxLength={500}
               />
-              <div className="flex justify-between text-sm text-gray-500 mt-2">
-                <span>최소 50자 이상 작성해주세요</span>
+              <div className="text-right text-sm text-gray-500 mt-2">
                 <span>{(profileData.introduction?.length || 0)} / 500</span>
               </div>
             </div>
@@ -206,8 +205,7 @@ const YouthProfile: React.FC = () => {
                 onChange={(e) => setProfileData({...profileData, vision: e.target.value})}
                 maxLength={500}
               />
-              <div className="flex justify-between text-sm text-gray-500 mt-2">
-                <span>농업에 대한 열정과 목표를 담아주세요</span>
+              <div className="text-right text-sm text-gray-500 mt-2">
                 <span>{(profileData.vision?.length || 0)} / 500</span>
               </div>
             </div>

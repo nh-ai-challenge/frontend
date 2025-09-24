@@ -1,0 +1,23 @@
+{
+  "name": "NH농협 Land Bridge",
+  "short_name": "Land Bridge",
+  "description": "농장 승계 매칭 플랫폼",
+  "theme_color": "#008350",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
